@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-256P0XXK8Q"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-256P0XXK8Q');
+        </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RenSher Enterprises LLC offers custom web development,e-commerce or portfolio and hosting in Florida or all USA. Build your perfect site today and boost your business">
+	<meta name="keywords" content="custom web development Florida, e-commerce solutions USA, software development startups, business geolocalization Florida, responsive web design, premium SEO services, payment gateways website integration, Web Designer Doral, Website Builder Miami, basic data analysis reports">
+	<link rel="canonical" href="https://www.rensherenterprises.com/">
+	<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="canonical" href="https://www.rensher.com/portfolio.html">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px; /* Add some padding around the body */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+        .carousel-container {
+            position: relative;
+            width: 90%; /* Responsive width */
+            max-width: 600px; /* Balanced for desktop/tablet */
+            margin: 0 auto; /* Center horizontally */
+        }
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Hide scrollbar for clean UI */
+        }
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+        article {
+            flex: 0 0 100%;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            padding: 15px; /* Padding for spacing */
+            border-radius: 8px; /* Slight rounding */
+            display: flex;
+            align-items: flex-start; /* Align top for tall images */
+            justify-content: space-between;
+            scroll-snap-align: start;
+            margin-right: 20px; /* Space between slides */
+            min-height: 150px; /* Minimum height, but flexible */
+        }
+        .text {
+            flex: 1;
+            padding-right: 10%; /* Space before image */
+            line-height:36px ;
+            size: 24px;
+        }
+        h4 {
+            margin: 0 0 10px; /* Spacing for readability */
+            margin-top: 15%;
+            margin-left: 12%;
+            font-size: 1.2em;
+        }
+        p {
+            margin: 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+            word-wrap: break-word; /* Wrap long text */
+            margin: 5%
+        }
+        .portfolio-image {
+            flex: 0 0 auto; /* Flexible width */
+            max-width: 150px; /* Limit max width to fit design */
+            height: auto; /* Maintain aspect ratio for tall images */
+            border-radius: 4px; /* Slight rounding for images */
+            object-fit: contain; /* Fit entire image without cropping */
+            margin: 5%;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #fff; /* White arrows */
+            cursor: pointer;
+            user-select: none;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent bg for better visibility */
+            padding: 5px 10px;
+            border-radius: 50%; /* Round arrows for user-friendly feel */
+        }
+        .arrow.left {
+            left: -30px;
+        }
+        .arrow.right {
+            right: -30px;
+        }
+        /* Accessibility improvements */
+        .carousel-container {
+            outline: none; /* Remove focus outline if needed, but keep for accessibility */
+        }
+        .desktop-image {
+            display: block; /* Visible on desktop */
+        }
+        .mobile-image {
+            display: none; /* Hidden on desktop */
+        }
+        
+        /* Media queries for responsiveness (tablets/desktop) */
+        @media (min-width: 768px) {
+            .carousel-container {
+                max-width: 700px;
+            }
+            article {
+                padding: 25px;
+            }
+            .portfolio-image {
+                max-width: 200px; /* Larger on bigger screens */
+            }
+           
+        }
+        @media (min-width: 1024px) {
+            .carousel-container {
+                max-width: 800px;
+            }
+        }
+        @media (max-width: 767px) { /* Mobile view */
+              .carousel-container {
+                max-width: 400px;
+                max-height: 600px;
+            }
+            article {
+                flex-direction: column; /* Stack vertically */
+                align-items: center; /* Center content */
+                max-height: fit-content;
+            }
+            .portfolio-image{
+                  margin-top: 2%;
+                  margin-bottom: 0%;
+            }
+            .text {
+                order: 2; /* Text first */
+                line-height: 18px;
+                font-size: 12px;
+                text-align: center;
+                margin-left: 5%;
+            }
+            h4{
+                font-size: 16px;
+                line-height: 24px;
+                margin-left: 0%;
+            }
+            .desktop-image {
+                display: none; /* Hide desktop image on mobile */
+            }
+            .mobile-image {
+                display: block; /* Show mobile-specific image */
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    	<!-- Header -->
+	<header id="header">
+		<a href="index.html">Home</a>
+	</header>
+
+
+
+	</nav>
+
+    <div class="carousel-container" role="region" aria-label="Portfolio Carousel" tabindex="0">
+        <div class="scroll-container">
+            <!-- Slide 1: Example with tall image support -->
+            <article>
+                <img src="images/project1 1.png" alt="Screenshot of restaurant, it has the home page, colors like red, white and images of stakes" class="portfolio-image mobile-image" loading="lazy">
+                <div class="text">
+                    <h4>restaurant</h4>
+                    <p>Developed for a lively restaurant offering culinary delights and live music. The website highlights its atmosphere with sections on "Our Story," menu, performances, photos, delivery/pickup operations, reservations, and integrated payment platform to streamline orders and bookings, drawing in food and entertainment lovers.</p>
+                </div>
+                <img src="images/project1.png" alt="Screenshot of restaurant, it has the home page, colors like red, white and images of stakes" class="portfolio-image desktop-image" loading="lazy">
+            </article>
+            
+            <!-- Add more slides as needed -->
+            <article>
+                <img src="images/project venus 1.png" alt="Mobile screenshot of Venus Loan Solutions project" class="portfolio-image mobile-image" loading="lazy"> <!-- Replace with your mobile path -->
+                <div class="text">
+                    <h4>Venus Home Loan</h4>
+                <p>Developed for a mortgage broker profile, offering tailored home loan solutions. The website simplifies homeownership with sections on services, loan options, testimonials, and easy appointment booking to guide users through the process.</p>
+               </div>
+                <img src="images/project venus.png" alt="Screenshot oof project for venus home loan solutions design home of the website " class="portfolio-image desktop-image" loading="lazy">
+            </article>
+            
+         
+        </div>
+        <span class="arrow left" role="button" aria-label="Previous slide">&lt;</span>
+        <span class="arrow right" role="button" aria-label="Next slide">&gt;</span>
+    </div>
+    	
+    <script>
+        // JavaScript for smooth navigation and accessibility
+        const container = document.querySelector('.scroll-container');
+        const leftArrow = document.querySelector('.arrow.left');
+        const rightArrow = document.querySelector('.arrow.right');
+        
+        leftArrow.addEventListener('click', () => {
+            container.scrollBy({ left: -container.clientWidth, behavior: 'smooth' });
+        });
+        
+        rightArrow.addEventListener('click', () => {
+            container.scrollBy({ left: container.clientWidth, behavior: 'smooth' });
+        });
+
+        // Keyboard navigation for accessibility
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                leftArrow.click();
+            } else if (e.key === 'ArrowRight') {
+                rightArrow.click();
+            }
+        });
+    </script>
+</body>
+</html>

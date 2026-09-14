@@ -1,0 +1,137 @@
+
+<style>
+  /* Estilos para el formulario: centrado, ancho adecuado, atractivo y responsive */
+  .form-container {
+    max-width: 500px; /* Ancho adecuado, no demasiado ancho */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo sutil para atractivo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    font-family: Arial, sans-serif; /* Fuente limpia */
+  }
+
+  .form-container label {
+    display: block; /* Cada label en su línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Color de texto oscuro */
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"] {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    font-size: 16px; /* Tamaño legible */
+  }
+
+  .form-container input[type="text"]:focus,
+  .form-container input[type="email"]:focus {
+    border-color: #007bff; /* Color azul al enfocar para atractivo */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Efecto glow */
+  }
+
+  /* Estilos para radios: agrupados y atractivos */
+  .radio-group {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff; /* Fondo blanco para resaltar */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+  .radio-group p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .radio-group input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.2); /* Un poco más grande para UX */
+  }
+
+  .radio-group label {
+    display: inline; /* Inline para radios lado a lado */
+    margin-right: 20px;
+    font-weight: normal;
+    cursor: pointer; /* Cursor pointer para interactividad */
+  }
+
+  /* Botón submit: atractivo */
+  .actions {
+    text-align: center; /* Centrado */
+    margin-top: 20px;
+  }
+
+  .button {
+    background-color: #007bff; /* Azul primario */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
+  .button:hover {
+    background-color: #0056b3; /* Azul más oscuro al hover */
+  }
+
+  /* Responsive: Ajustes para móviles */
+  @media (max-width: 600px) {
+    .form-container {
+      max-width: 90%; /* Casi todo el ancho en móviles */
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .radio-group label {
+      display: block; /* Radios uno debajo del otro en móviles */
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      width: 100%; /* Botón full-width en móviles */
+    }
+  }
+</style>
+
+<!-- Formulario actualizado -->
+<div class="form-container">
+  <form method="POST" action="">
+    <div class="radio-group">
+      <p>Please select your intent:</p>
+      <label>
+        <input type="radio" id="request" name="intent" value="request" required>
+        Ask for a service
+      </label>
+      <label>
+        <input type="radio" id="offer" name="intent" value="offer">
+        Offer a service
+      </label>
+    </div>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="comments">Comments</label>
+    <input type="text" id="comments" name="comments" placeholder="(optional)" />
+
+    <ul class="actions">
+      <li><button type="submit" class="button">Send</button></li>
+    </ul>
+  </form>
+</div>
+
+
