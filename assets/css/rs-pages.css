@@ -1,0 +1,48 @@
+.rs-hero {
+  padding: 72px 0 56px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--rs-ink) 4%, var(--rs-fog)) 0%, var(--rs-fog) 100%);
+}
+.rs-hero__eyebrow {
+  font-size: 0.85rem; font-weight: 600; color: var(--rs-sea);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
+}
+.rs-hero p { font-size: 1.125rem; max-width: 42rem; color: var(--rs-muted); }
+.rs-pillars {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
+}
+@media (max-width: 900px) { .rs-pillars { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .rs-pillars { grid-template-columns: 1fr; } }
+.rs-pillar {
+  background: var(--rs-cloud); border: 1px solid var(--rs-mist);
+  border-radius: var(--rs-radius-card); padding: 16px 18px;
+}
+.rs-pillar strong { display: block; font-family: var(--font-display); margin-bottom: 6px; }
+.rs-pillar p { margin: 0; font-size: 0.9rem; color: var(--rs-muted); max-width: none; }
+.rs-case img {
+  width: 100%; border-radius: 10px; border: 1px solid var(--rs-mist);
+  background: var(--rs-mist); aspect-ratio: 16/10; object-fit: cover;
+}
+.rs-case__meta { font-size: 0.85rem; color: var(--rs-sea); font-weight: 600; margin-bottom: 8px; }
+.rs-case dl { margin: 16px 0 0; }
+.rs-case dt {
+  font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--rs-muted); margin-top: 12px;
+}
+.rs-case dd { margin: 4px 0 0; color: var(--rs-ink); }
+.rs-table-wrap { overflow-x: auto; border: 1px solid var(--rs-mist); border-radius: var(--rs-radius-card); background: var(--rs-cloud); }
+.rs-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.rs-table th, .rs-table td {
+  padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--rs-mist); vertical-align: top;
+}
+.rs-table th { background: color-mix(in srgb, var(--rs-ink) 4%, var(--rs-cloud)); font-weight: 600; }
+.rs-table tr:last-child td { border-bottom: none; }
+.rs-disclaimer {
+  font-size: 0.875rem; color: var(--rs-muted); max-width: 65ch; margin-top: 24px;
+}
+.rs-band {
+  background: color-mix(in srgb, var(--rs-sea) 8%, var(--rs-fog));
+  border: 1px solid color-mix(in srgb, var(--rs-sea) 25%, var(--rs-mist));
+  border-radius: var(--rs-radius-card); padding: 32px; text-align: center;
+}
+.rs-band p { margin-inline: auto; }

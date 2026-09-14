@@ -1,0 +1,20 @@
+/* RenSher brand tokens — see docs/BRAND.md */
+:root {
+  --rs-ink: #0B1F2A;
+  --rs-ink-soft: #1A3340;
+  --rs-fog: #F4F1EA;
+  --rs-cloud: #FFFFFF;
+  --rs-mist: #D9E2E6;
+  --rs-accent: #C45C26;
+  --rs-accent-hover: #A34A1C;
+  --rs-sea: #2F6F6A;
+  --rs-muted: #5C6B73;
+  --rs-warn: #B45309;
+  --rs-radius-card: 12px;
+  --rs-radius-btn: 10px;
+  --rs-max: 1120px;
+  --rs-space: 8px;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
