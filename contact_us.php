@@ -119,7 +119,7 @@ $prefill_plan = isset($_GET['plan']) ? htmlspecialchars($_GET['plan'], ENT_QUOTE
         <li><a href="portfolio.html">Projects</a></li>
         <li><a href="contact_us.php" aria-current="page">Contact</a></li>
         </ul>
-        <a class="rs-btn" href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Basic%2FStandard%2FPremium%2FCustom)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Get a free quote</a>
+        <a class="rs-btn" href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Launch%20%2F%20Grow%20%2F%20Commerce%20%2F%20Custom)%3A%0ACare%20(yes%2Fno)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Get a free quote</a>
       </nav>
     </div>
   </header>
@@ -127,7 +127,7 @@ $prefill_plan = isset($_GET['plan']) ? htmlspecialchars($_GET['plan'], ENT_QUOTE
     <section class="rs-hero">
       <div class="rs-wrap">
         <h1>Contact</h1>
-        <p>Prefer email? Use <a href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Basic%2FStandard%2FPremium%2FCustom)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Get a free quote</a>. Or call <a href="tel:+15613600081">+1 (561) 360-0081</a>. You can also send the form below.</p>
+        <p>Prefer email? Use <a href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Launch%20%2F%20Grow%20%2F%20Commerce%20%2F%20Custom)%3A%0ACare%20(yes%2Fno)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Get a free quote</a>. Or call <a href="tel:+15613600081">+1 (561) 360-0081</a>. You can also send the form below.</p>
       </div>
     </section>
     <section class="rs-section">
@@ -156,10 +156,18 @@ $prefill_plan = isset($_GET['plan']) ? htmlspecialchars($_GET['plan'], ENT_QUOTE
             <label for="plan">Plan interest</label>
             <select id="plan" name="plan">
               <option value="">Select…</option>
-              <option value="Basic Plan">Basic</option>
-              <option value="Standard Plan">Standard</option>
-              <option value="Premium Plan">Premium</option>
+              <option value="Launch">Launch</option>
+              <option value="Grow">Grow</option>
+              <option value="Commerce">Commerce</option>
               <option value="Custom">Custom</option>
+            </select>
+
+            <label for="care">Care interest</label>
+            <select id="care" name="care">
+              <option value="">Select…</option>
+              <option value="yes">Yes — Include Care</option>
+              <option value="no">No — without Care</option>
+              <option value="unsure">Not sure yet</option>
             </select>
 
             <label for="project_type">Project type</label>
@@ -178,7 +186,7 @@ $prefill_plan = isset($_GET['plan']) ? htmlspecialchars($_GET['plan'], ENT_QUOTE
 
             <div class="rs-actions">
               <button type="submit" id="submitBtn" class="rs-btn" disabled>Send message</button>
-              <a class="rs-btn rs-btn--secondary" href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Basic%2FStandard%2FPremium%2FCustom)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Or email a free quote</a>
+              <a class="rs-btn rs-btn--secondary" href="mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Launch%20%2F%20Grow%20%2F%20Commerce%20%2F%20Custom)%3A%0ACare%20(yes%2Fno)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21">Or email a free quote</a>
             </div>
           </form>
         </div>

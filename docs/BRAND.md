@@ -66,7 +66,7 @@ Use these as the spine of homepage, offers, and About.
    Every build is scoped to the business. No recycled competitor skins.
 
 2. **Clear offers, flexible when needed**  
-   Named plans (Basic / Standard / Premium) plus customize-your-own. Prices in USD; final scope in contract.
+   Named packages (Launch / Grow / Commerce) plus Care module and customize-your-own. Prices in USD; final scope in contract.
 
 3. **Florida roots, USA reach**  
    Local accountability with the ability to serve clients nationwide.

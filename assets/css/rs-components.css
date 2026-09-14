@@ -175,3 +175,19 @@ details.rs-faq summary {
 }
 details.rs-faq summary::-webkit-details-marker { display: none; }
 details.rs-faq[open] summary { border-bottom: 1px solid var(--rs-mist); margin-bottom: 12px; }
+
+/* Care toggle on package cards */
+.rs-plan__care {
+  display: flex; align-items: center; gap: 10px;
+  margin: 12px 0 4px; font-weight: 600; cursor: pointer;
+  min-height: 44px;
+}
+.rs-plan__care input {
+  width: 1.15rem; height: 1.15rem; accent-color: var(--rs-sea);
+  flex-shrink: 0;
+}
+.rs-care-band { text-align: left; }
+.rs-meta {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  color: var(--rs-muted); margin: 8px 0 0;
+}
