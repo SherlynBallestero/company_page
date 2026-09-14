@@ -1,265 +1,219 @@
 # RenSher company_page — UX waves + light design system
 
-**Status:** Ready for Eng / CloudAgent (Marketing copy FINAL A–E + Brand tokens v1 + Legal bodies)  
-**Repo:** `SherlynBallestero/company_page` · **Live:** https://www.rensher.com/  
-**Brand:** `/workspace/rensher-brand/BRAND.md`  
-**Legal bodies:** `/workspace/stockp-legal/rensher-privacy-v1.html` (or `rensher-privacy-body.html`) · `/workspace/stockp-legal/rensher-terms-v1.1.html` (CEO approve before publish)  
-**Out:** StockP · HTML5 UP look · competitor clones · invented Legal · **comparison % savings table (DROP)** · “Lock this deal”
-
-**Goal:** Original RenSher static site (HTML/CSS/JS + `contact_us.php`). PR → `main`; CEO merges.
-
-| Live | Target |
-|---|---|
-| `index.html` | Redesign — Marketing homepage pack |
-| `offerts.html` | → **`offers.html`** + redirect; Marketing offers pack |
-| `portfolio.html` | Redesign as **Projects** |
-| `contact_us.php` | Restyle; keep/enhance form |
-| `FAQ.html` | Redesign + dedupe |
-| `terms.html` | Shell + **Legal Terms v1.1 body** |
-| `privacy.html` | **NEW** — Legal Privacy body |
-
-**Nav (all pages):** Home · Offers · Projects · Contact · (FAQ in footer or overflow; Marketing primary nav is Home | Offers | Projects | Contact)
+**Status:** Packaging **A** + **CEO-locked prices** (2026-09-14). Eng GREENLIGHT W3b/W6b. SEO labels: **Foundational | Advanced | In-depth** (Brand-final).  
+**Repo:** `SherlynBallestero/company_page` · **Live:** https://www.rensher.com/ · **main:** redesign @ `9ee73af`  
+**Brand:** `/workspace/rensher-brand/BRAND.md` (tokens unchanged)  
+**Legal:** privacy/terms already shipped — do not rewrite bodies  
+**Out:** StockP · HTML5 UP · % savings table · “Lock this deal” · **Basic / Standard / Premium on-page strings** (Eng map only)
 
 ---
 
-## 0. Design system (Brand v1)
+## Packaging A (CEO) — named packages
 
-### Color
+| On-page name | Eng map (legacy) | Initial | With Care / mo | Without Care (maintenance-free) | Badge |
+|---|---|---|---|---|---|
+| **Launch** | ← Basic | $1,200 | $99 | $2,699 | — |
+| **Grow** | ← Standard | $2,299 | $179 | $4,499 | **Recommended ★** |
+| **Commerce** | ← Premium | $3,799 | $279 | $6,999 | — |
+| **Care** | maintained retainer | — | = package’s $/mo | — | **Module**, not a 4th size |
+| **Custom** | discovery quote | — | — | — | Band below packages |
 
-```css
-:root {
-  --rs-ink: #0B1F2A;
-  --rs-ink-soft: #1A3340;
-  --rs-fog: #F4F1EA;
-  --rs-cloud: #FFFFFF;
-  --rs-mist: #D9E2E6;
-  --rs-accent: #C45C26;
-  --rs-accent-hover: #A34A1C;
-  --rs-sea: #2F6F6A;
-  --rs-muted: #5C6B73;
-  --rs-warn: #B45309;
-}
-```
+> **PRICES LOCKED (CEO 2026-09-14):** Launch $1,200 / Care $99 / Without Care $2,699 · Grow $2,299 / $179 / $4,499 · Commerce $3,799 / $279 / $6,999. Care allowances: **15 / 25 / 45 minutes** of minor updates / month (not hours).
+>
+> **Brand-final SEO labels:** matrix row = Foundational | Advanced | In-depth. Grow blurb keeps “advanced SEO”. Commerce uses “in-depth SEO” + “site support in three languages”. Care mailto subject = `Care plan — RenSher`.
 
-Fog page · cloud cards · ink text · accent **only** on primary CTAs · sea for recommended badge/links · kill `#484459` / `#413D53` / Source Sans Pro.
 
-### Type
+**Kill sitewide (visible copy):** Basic, Standard, Premium. Keep mapping only in Eng comments / mailto body if needed for ops continuity.
 
-Fraunces (H1–H2) · Manrope (UI/body/buttons) · IBM Plex Mono (prices/meta). Scale per Brand §4.2.
+---
 
-### Space
+## 0. Design system (unchanged Brand v1)
 
-8px base · max 1120 · radius 12 card / 10 button · section 64/40 · focus accent ring · ≥44px hits · motion 150–250ms · `prefers-reduced-motion`.
+Tokens, type, space, header/footer, fog/cloud/accent/sea — same as shipped redesign.
 
-### Components
+**Component updates for packaging A**
 
 | Class | Spec |
 |---|---|
-| `.rs-header` | Wordmark RenSher + muted Enterprises LLC. Nav: Home · Offers · Projects · Contact. Primary: **Get a free quote** (mailto). Mobile disclosure — not HTML5 UP `#menu` clone. |
-| `.rs-footer` | Ink-soft. LLC · FL/USA · email · tel · Offers · Projects · FAQ · Terms · **Privacy**. |
-| `.rs-btn` / `.rs-btn--secondary` | Accent fill / outline. Sentence case Manrope 600. |
-| `.rs-card` / `.rs-plan` | Cloud cards. `.rs-plan--featured` = **Standard** (sea outline + “Recommended”). |
-| `.rs-section` / `.rs-prose` | Page rhythm + legal/FAQ. |
+| `.rs-plan` | One card per **Launch / Grow / Commerce** |
+| `.rs-plan--featured` | **Grow** (sea outline + Recommended) |
+| `.rs-plan__care` | Toggle or checkbox: **Include Care ($X/mo)** — default **on** for Grow/Commerce, optional for Launch. When on: show monthly Care price; when off: emphasize maintenance-free total. |
+| `.rs-care-band` | Optional short Care explainer under the three cards (what Care includes: hosting/support/minor changes path — Marketing copy). |
+| `.rs-custom-band` | Custom / discovery CTA |
 
-### CTA ladder (Marketing — mandatory)
-
-1. **Get a free quote** → mailto (primary everywhere)  
-2. **Get a {Basic\|Standard\|Premium} quote** → mailto with plan subject  
-3. **Customize your build** → mailto custom subject  
-4. Tel **+1-561-360-0081** · keep `contact_us.php` as alternate path  
-
-**Mailto base**
-
-```
-mailto:RenSherEnterprisesLLC@gmail.com?subject=Free%20quote%20-%20RenSher&body=Hi%20RenSher%2C%0A%0ABusiness%3A%0ALocation%3A%0APlan%20interest%20(Basic%2FStandard%2FPremium%2FCustom)%3A%0AProject%20type%20(Website%20%2F%20E-commerce%20%2F%20Portfolio)%3A%0A%0AThanks%21
-```
-
-Plan subjects: `Quote request — Basic Plan` | `Quote request — Standard Plan` | `Quote request — Premium Plan` | `Custom quote — RenSher`
-
-**Secondary (home):** View plans → `offers.html` (not scroll-only “Proceed”).
-
-**Avoid (Marketing):** high-converting, stunning, supercharge, spark, unlock, lock this deal, new heights, guaranteed rankings/ROI, “up to X% less.”
+**UX decision (locked):** Prefer **per-card Care toggle** over showing two prices as equal primaries. Maintenance-free is the “off” state of Care, not a competing product name.
 
 ---
 
-## Canonical copy (Marketing FINAL A–E)
+## CTA ladder (updated)
+
+1. **Get a free quote** → mailto (primary; Brand hero seed unchanged)  
+2. **Get a {Launch\|Grow\|Commerce} quote** → mailto  
+3. **Ask about Care** → mailto subject `Care plan — RenSher` (or include Care in package mailto body)  
+4. **Customize your build** → `Custom quote — RenSher`  
+5. Tel **+1-561-360-0081** · `contact_us.php` alternate  
+
+**Mailto subjects**
+
+- `Quote request — Launch package`  
+- `Quote request — Grow package`  
+- `Quote request — Commerce package`  
+- `Care plan — RenSher`  
+- `Custom quote — RenSher`  
+
+Update free-quote body plan interest line to: `Plan interest (Launch / Grow / Commerce / Custom):` + `Care (yes/no):`
+
+**Avoid:** Basic/Standard/Premium in UI · Lock this deal · % savings · StockP · hype list (Marketing).
+
+**Nav:** Home · **Offers** · Projects · Contact (FAQ footer).
+
+---
+
+## Canonical copy (packaging A)
 
 ### Homepage
 
-**Hero**  
-- H1: RenSher Enterprises  
-- Sub: Custom websites for Florida and U.S. businesses — built to fit how you actually work.  
-- Support: Custom web, e-commerce, and portfolio sites — with hosting and care after launch.  
-- Primary: Get a free quote (mailto)  
-- Secondary: View plans → offers  
+**Hero** — Brand seed unchanged:  
+H1 RenSher Enterprises · Sub “Custom websites for Florida…” · Support hosting/care · CTA Get a free quote · Secondary View packages → `offers.html`
 
-**Pillars:** Custom — not cookie-cutter · Clear plans · Florida roots, U.S. reach · Launch and ongoing care · Proof over promises  
+**Pillars** — keep five; “Clear plans” → “Clear packages — Launch, Grow, Commerce”
 
-**Offer cards (prices published)**
+**Package cards (job-led — Appendix W3b)**
 
-| Plan | Audience | Price | CTA |
+| Package | Blurb | Price UI | CTA |
 |---|---|---|---|
-| Basic | Startups/local · ≤10 pages | $2,200 initial · $299/mo · or $5,080 maintenance-free | Get a Basic quote |
-| **Standard · Recommended** | Growing · ≤20 pages | $4,500 · $449/mo · or $8,550 | Get a Standard quote |
-| Premium | E-com/complex · ≤35 pages | $7,000 · $599/mo · or $12,400 | Get a Premium quote |
+| **Launch** | First credible local site. A custom responsive site so customers can find you and trust you — foundational SEO, Google Maps profile, photos, domain & hosting. | $1,200 + Care $99/mo (15 min) / off → $2,699 | Get a Launch quote |
+| **Grow ★** | Visibility and leads. Everything in Launch, plus advanced SEO, blog, calendar & chat, forms, two languages, and monthly performance notes — set up to help turn visitors into inquiries. | $2,299 + Care $179/mo (25 min) / off → $4,499 | Get a Grow quote |
+| **Commerce** | Sell or book online. Everything in Grow, plus payments, dashboards, API connections, in-depth SEO, speed work, and site support in three languages. | $3,799 + Care $279/mo (45 min) / off → $6,999 | Get a Commerce quote |
 
-Blurbs: use Marketing pack (Basic SEO/Maps/photos…; Standard + advanced SEO/blog/chat/forms/2 languages…; Premium + payments/APIs/premium SEO/speed/3 languages…).  
-Note: Base plans; we adapt. Final price in contract.
+Under cards: **Ask about Care** + note: Packages are starting points; final scope in contract.
 
-**Projects teaser:** H2 Projects · Selected work… · CTA See projects  
+**Services:** Local presence · Web design · E-commerce (**Commerce**) · Simple reporting (**Grow+** with Care)
 
-**Services:** Local presence · Web design · E-commerce (Premium) · Simple reporting (Standard+)  
-
-**Closing:** H2 Tell us what you need the site to do · map Basic/Standard/Premium/custom · Get a free quote  
+**Closing:** map Launch / Grow / Commerce / custom · Get a free quote
 
 ### Offers page
 
-- H1: Web development plans  
-- Intro: Clear Basic, Standard, and Premium… Hosting and care options included.  
-- Full feature matrix + timelines **30 / 40 / 60** business days  
-- Custom band: Don’t see a fit? … CTA **Customize your build**  
-- Disclaimer: USD; FL tax may apply; final on signing; SEO/ROI not guaranteed  
-- **DROP** Market Initial Cost / “Up to X% less” table entirely  
+- **H1:** Website packages  
+- Intro: Launch, Grow, and Commerce for Florida and U.S. businesses. Add **Care** for ongoing hosting and support — or choose maintenance-free.  
+- Three full cards + **feature matrix** columns Launch | Grow | Commerce (Appendix — Marketing paste-ready)  
+- Timelines still **30 / 40 / 60** business days (Launch / Grow / Commerce)  
+- **Care module band** (what’s included; not a fourth package size)  
+- **Custom band:** Don’t see a fit? … Customize your build  
+- Disclaimer unchanged (USD, FL tax, contract, no SEO/ROI guarantee)  
+- **DROP** % comparison table  
 
-### Projects page
+### Projects / FAQ / Contact / Legal
 
-- H1: Projects  
-- Intro: Work samples… business type, what we built, job the site does  
-- **Case template:** problem (sector) / built / outcome (job)  
-  1. Restaurant & live music — Hospitality — story/menu/shows/photos/delivery/reservations/payments — browse, book, pay  
-  2. Venus Home Loan — Mortgage — services/options/testimonials/booking — explain + book consult  
-- If only two: full-width cards + “More projects on request” + quote CTA — **no filler**  
-
-### Contact
-
-Prefer mailto ladder; `contact_us.php` fields if kept: name, business, email, phone, plan interest, project type, notes (expand beyond current name/email/comments if Eng touches form).
+- Projects cases unchanged (problem / built / job)  
+- FAQ: replace Basic/Standard/Premium wording with Launch/Grow/Commerce + Care  
+- Contact plan `<select>`: Launch / Grow / Commerce / Custom + Care yes/no  
+- Privacy/Terms: no substance change  
 
 ---
 
-## Waves
+## Follow-up waves (Eng PR)
 
-### W1 — Foundation
+### W3b — Packaging A rename (priority)
 
-Tokens + fonts · shared header/footer · kill mauve/Source Sans · shrink/remove RS.gif theater · landmarks + skip-link.
+**DoD W3b.1** No visible Basic/Standard/Premium on index, offers, FAQ, contact.  
+**DoD W3b.2** Cards + matrix use Launch / Grow / Commerce; Grow featured.  
+**DoD W3b.3** Care toggle on each card (Include Care $X/mo + **15/25/45 minutes of minor updates / month**); maintenance-free when off.  
+**DoD W3b.4** Care band + Custom band on offers.  
+**DoD W3b.5** Mailto subjects updated; free-quote body lists new names.  
+**DoD W3b.6** H1 “Website packages”; nav still Offers.  
+**DoD W3b.7** Still no % savings table.  
+**DoD W3b.8** Dollar amounts match CEO lock: Launch $1,200/$99/$2,699 · Grow $2,299/$179/$4,499 · Commerce $3,799/$279/$6,999; Care minutes labeled 15/25/45.  
+**DoD W3b.9** SEO row labels: **Foundational | Advanced | In-depth** (never Basic/Premium as SEO labels). Grow keeps “advanced SEO” in blurb.
 
-**DoD W1.1–W1.3:** Fog shell; nav labels Offers/Projects; quote CTA mailto.
+### W6b — FAQ / contact labels
 
-### W2 — Homepage
+**DoD W6b.1** FAQ answers use new package names.  
+**DoD W6b.2** Contact plan select + Care field.
 
-Implement Marketing homepage sections in order above.
+### Optional polish (backlog from PR #1)
 
-**DoD W2.1** Brand/Marketing hero (no “Launch to New Heights”).  
-**DoD W2.2** One accent primary above the fold.  
-**DoD W2.3** Standard card featured; prices match table.  
-**DoD W2.4** No Proceed-as-primary.
-
-### W3 — Offers
-
-**DoD W3.1** `offers.html` + `offerts.html` redirect; sitewide links.  
-**DoD W3.2** Three plans + Custom band; quote CTAs only.  
-**DoD W3.3** Feature matrix per Appendix W3 + 30/40/60 days.  
-**DoD W3.4** **No** comparison % table.  
-**DoD W3.5** Disclaimer present.
-
-### W4 — Projects
-
-**DoD W4.1** Two real cases with problem/built/outcome.  
-**DoD W4.2** CTA Discuss / Get a free quote.  
-**DoD W4.3** No fake case studies.
-
-### W5 — Contact
-
-**DoD W5.1** Mailto primary path works.  
-**DoD W5.2** `contact_us.php` restyled; labels; success/fail tokens.  
-**DoD W5.3** Tel visible.  
-**DoD W5.4** Plan query/`?plan=` optional → subject/body.
-
-### W6 — FAQ
-
-**DoD W6.1** Dedupe doubled questions.  
-**DoD W6.2** Grouped H2/H3; keyboard OK.  
-**DoD W6.3** CTA to quote + offers. Voice: practical, not hype.
-
-### W7 — Legal
-
-**DoD W7.1** Ship `privacy.html` with Legal Privacy body (CEO-approved draft).  
-**DoD W7.2** Replace `terms.html` inner with Terms v1.1 body — **no UX rewrite of clauses**.  
-**DoD W7.3** Footer Privacy + Terms sitewide.  
-**DoD W7.4** Entity **RenSher Enterprises LLC** · email RenSherEnterprisesLLC@gmail.com.
-
-### W8 — Launch
-
-**DoD W8.1** Redirects + no wrong host links.  
-**DoD W8.2** Unique meta + canonicals.  
-**DoD W8.3** a11y AA fog/ink; focus visible.  
-**DoD W8.4** reduced-motion; no long loader.  
-**DoD W8.5** HTML5 UP `main.css` unused on migrated pages.  
-**DoD W8.6** Brand/Marketing spot-check before CEO merge.
+aria-current on FAQ/privacy/terms · residual `style=` · contact PHP `hello@` ops.
 
 ---
 
-## Eng checklist
+## Eng checklist (packaging A)
 
-- [ ] W1 shell + tokens  
-- [ ] W2 homepage (Marketing A)  
-- [ ] W3 offers rename + matrix; **no % table**  
-- [ ] W4 projects cases  
-- [ ] W5 mailto + contact  
-- [ ] W6 FAQ  
-- [ ] W7 privacy NEW + terms v1.1  
-- [ ] W8 harden  
-- [ ] CTA ladder mailto subjects  
-- [ ] No StockP / no Lock this deal / no invented Legal  
+- [ ] W3b.1–W3b.7  
+- [ ] W6b.1–W6b.2  
+- [ ] Appendix W3b matrix + blurbs + Care band implemented  
+- [ ] CEO-locked $ on cards + matrix (no Basic/Std/Prem dollars)  
+- [ ] SEO labels Foundational | Advanced | In-depth (Brand-final)  
+- [ ] Legal untouched  
 
-**CSS layout:** `assets/css/rs-tokens.css` · `rs-base.css` · `rs-components.css` · `rs-pages.css`
-
-**Coord:** CoS · **Copy:** Digital Marketing · **Tokens/voice:** Brand · **Legal bodies:** Legal · **UX:** this doc
-
+**Coord:** CoS · **Copy:** Digital Marketing · **Tokens:** Brand · **UX:** this doc
 
 ---
 
-## Appendix W3 — Offers feature matrix (Marketing paste-ready)
+## Appendix W3b — Packaging A (Brand-final · prices LOCKED)
 
-Eng: implement as `.rs-plan` cards + optional comparison **feature** table (features only — **not** a market/% savings table).
+> Dollar cells below are **CEO-locked** (2026-09-14). Eng ships exactly these figures. Care allowance = **minutes** of minor updates / month.
 
-| Feature | Basic | Standard | Premium |
+### 1) Job-led card blurbs
+
+**Launch**  
+First credible local site. A custom responsive site so customers can find you and trust you — **foundational SEO**, Google Maps profile, photos, domain & hosting.
+
+**Grow** ★ Recommended  
+Visibility and leads. Everything in Launch, plus advanced SEO, blog, calendar & chat, forms, two languages, and monthly performance notes — **set up to help turn visitors into inquiries**.
+
+**Commerce**  
+Sell or book online. Everything in Grow, plus payments, dashboards, API connections, **in-depth SEO**, speed work, and **site support in three languages**.
+
+### 2) Feature matrix (Launch | Grow | Commerce)
+
+| Feature | Launch | Grow | Commerce |
 |---|---|---|---|
-| Best for | Startups & local / first site | Growing businesses / visibility + leads | E-commerce & complex builds |
-| Pages | Up to 10 | Up to 20 | Up to 35 |
+| Job | First local site | Visibility + leads | Sell/book online |
+| Pages | ≤10 | ≤20 | ≤35 |
 | Timeline | 30 business days | 40 business days | 60 business days |
-| Initial price | $2,200 | $4,500 | $7,000 |
-| Maintained | $299/mo | $449/mo | $599/mo |
-| Maintenance-free | $5,080 | $8,550 | $12,400 |
-| 100% custom web development | ✓ | ✓ | ✓ |
-| Responsive design | ✓ | ✓ | ✓ |
-| SEO | Basic | Advanced | Premium |
-| Google Maps profile setup | ✓ | ✓ | ✓ |
-| Professional photographs | Up to 20 | Up to 20 | Up to 20 |
-| Domain & hosting (99.9% uptime) | ✓ | ✓ | ✓ |
-| Technical support | 24/7 | 24/7 | 24/7 |
-| Minor changes / month | 15 | 25 | 45 |
-| Blog integration | — | ✓ | ✓ |
-| Calendar and chat integration | — | ✓ | ✓ |
-| Dynamic forms | — | Up to 3 | Up to 3 |
-| Multilingual | — | Basic (2 languages) | Professional translation (3 languages) |
-| Monthly performance analysis | — | ✓ | — |
-| Monthly traffic/behavior reports | — | — | ✓ |
-| Payment gateway integration | — | — | ✓ |
+| Initial | $1,200 | $2,299 | $3,799 |
+| With Care (/mo) | $99 | $179 | $279 |
+| Without Care (maintenance-free) | $2,699 | $4,499 | $6,999 |
+| Custom responsive | ✓ | ✓ | ✓ |
+| SEO | **Foundational** | **Advanced** | **In-depth** |
+| Google Maps profile | ✓ | ✓ | ✓ |
+| Pro photos | up to 20 | up to 20 | up to 20 |
+| Domain & hosting (99.9%) | ✓ | ✓ | ✓ |
+| Support | 24/7 | 24/7 | 24/7 |
+| Minutes of minor updates / month (with Care) | 15 minutes | 25 minutes | 45 minutes |
+| Blog | — | ✓ | ✓ |
+| Calendar + chat | — | ✓ | ✓ |
+| Dynamic forms | — | up to 3 | up to 3 |
+| Languages | — | 2 | Site support in three languages |
+| Monthly performance | — | ✓ | — |
+| Traffic/behavior reports | — | — | ✓ |
+| Payments | — | — | ✓ |
 | Custom dashboards | — | — | ✓ |
-| External API connections | — | — | 2 |
-| Advanced speed optimization | — | — | ✓ |
+| External APIs | — | — | 2 |
+| Speed optimization | — | — | Advanced |
 | Recommended badge | — | Yes | — |
-| Card CTA | Get a Basic quote | Get a Standard quote | Get a Premium quote |
-| Mailto subject | Quote request — Basic Plan | Quote request — Standard Plan | Quote request — Premium Plan |
+| Card CTA | Get a Launch quote | Get a Grow quote | Get a Commerce quote |
+| Mailto subject | Quote request — Launch | Quote request — Grow | Quote request — Commerce |
 
-**Custom (below matrix):** Don’t see a fit? Describe what you need — we’ll quote only that. CTA: Customize your build · subject `Custom quote — RenSher`
+**Disclaimer:** Prices in USD; Florida sales tax may apply. Final prices and services confirmed upon signing. SEO rankings and ROI are not guaranteed.
 
-**Disclaimer:** Prices in USD; Florida sales tax may apply. Final prices and services confirmed upon signing. SEO rankings and ROI depend on external factors and are not guaranteed.
+**Do not include:** market comparison / % savings table.  
+**Do not show on-page:** Basic, Standard, Premium (package names).  
+**Do not use SEO labels:** “Basic SEO”, “Premium SEO”.
 
-**Do not include:** market comparison / % savings table.
+### 3) Care band copy
 
----
+**Headline:** Care  
+**Sub:** Ongoing hosting, support, and small updates after go-live.
 
-## PR note for Eng
+**Body:** Care is not a fourth package. On each card, toggle **Include Care ($X/mo)** for hosting, support, and that package’s monthly minor-change allowance — or choose the without-Care price for a maintenance-free handoff.
 
-Commit this file into the `company_page` repo as `docs/UX-WAVES-COMPANY-PAGE.md` (and optional `docs/MARKETING-COPY-NOTES.md`) on the redesign branch so it ships with the PR to `main`. Source of truth on the box until then: `/workspace/company_page/docs/`.
+**Per-card toggle labels:** Include Care ($99/mo) · Include Care ($179/mo) · Include Care ($279/mo)  
+**Alt when off:** Without Care — $2,699 / $4,499 / $6,999
+
+**Band CTA:** Ask about Care · mailto subject **`Care plan — RenSher`**
+
+**Custom band:** Don’t see a fit? Describe what you need — we’ll quote only that. CTA: Customize your build · subject `Custom quote — RenSher`
+
+**PR:** Eng commits this doc with packaging A PR using CEO-locked prices.

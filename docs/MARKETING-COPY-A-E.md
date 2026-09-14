@@ -20,23 +20,23 @@
 
 | Plan | Audience | Price | CTA |
 |---|---|---|---|
-| Basic | Startups/local · ≤10 pages | $2,200 initial · $299/mo · or $5,080 maintenance-free | Get a Basic quote |
-| **Standard · Recommended** | Growing · ≤20 pages | $4,500 · $449/mo · or $8,550 | Get a Standard quote |
-| Premium | E-com/complex · ≤35 pages | $7,000 · $599/mo · or $12,400 | Get a Premium quote |
+| Launch | Startups/local · ≤10 pages | $1,200 initial · Care $99/mo (15 min) · or $2,699 without Care | Get a Launch quote |
+| **Grow · Recommended** | Growing · ≤20 pages | $2,299 · Care $179/mo (25 min) · or $4,499 without Care | Get a Grow quote |
+| Commerce | E-com/complex · ≤35 pages | $3,799 · Care $279/mo (45 min) · or $6,999 without Care | Get a Commerce quote |
 
-Blurbs: use Marketing pack (Basic SEO/Maps/photos…; Standard + advanced SEO/blog/chat/forms/2 languages…; Premium + payments/APIs/premium SEO/speed/3 languages…).  
+Blurbs: Launch foundational SEO/Maps/photos…; Grow + advanced SEO/blog/chat/forms/2 languages — set up to help turn visitors into inquiries; Commerce + payments/APIs/in-depth SEO/speed/site support in three languages.  
 Note: Base plans; we adapt. Final price in contract.
 
 **Projects teaser:** H2 Projects · Selected work… · CTA See projects  
 
-**Services:** Local presence · Web design · E-commerce (Premium) · Simple reporting (Standard+)  
+**Services:** Local presence · Web design · E-commerce (Commerce) · Simple reporting (Grow+)  
 
-**Closing:** H2 Tell us what you need the site to do · map Basic/Standard/Premium/custom · Get a free quote  
+**Closing:** H2 Tell us what you need the site to do · map Launch/Grow/Commerce/custom · Get a free quote  
 
 ### Offers page
 
 - H1: Web development plans  
-- Intro: Clear Basic, Standard, and Premium… Hosting and care options included.  
+- Intro: Clear Launch, Grow, and Commerce… Hosting and Care options included.  
 - Full feature matrix + timelines **30 / 40 / 60** business days  
 - Custom band: Don’t see a fit? … CTA **Customize your build**  
 - Disclaimer: USD; FL tax may apply; final on signing; SEO/ROI not guaranteed  
@@ -61,26 +61,26 @@ Prefer mailto ladder; `contact_us.php` fields if kept: name, business, email, ph
 
 Eng: implement as `.rs-plan` cards + optional comparison **feature** table (features only — **not** a market/% savings table).
 
-| Feature | Basic | Standard | Premium |
+| Feature | Launch | Grow | Commerce |
 |---|---|---|---|
 | Best for | Startups & local / first site | Growing businesses / visibility + leads | E-commerce & complex builds |
 | Pages | Up to 10 | Up to 20 | Up to 35 |
 | Timeline | 30 business days | 40 business days | 60 business days |
-| Initial price | $2,200 | $4,500 | $7,000 |
-| Maintained | $299/mo | $449/mo | $599/mo |
-| Maintenance-free | $5,080 | $8,550 | $12,400 |
+| Initial price | $1,200 | $2,299 | $3,799 |
+| With Care | $99/mo | $179/mo | $279/mo |
+| Without Care | $2,699 | $4,499 | $6,999 |
 | 100% custom web development | ✓ | ✓ | ✓ |
 | Responsive design | ✓ | ✓ | ✓ |
-| SEO | Basic | Advanced | Premium |
+| SEO | Foundational | Advanced | In-depth |
 | Google Maps profile setup | ✓ | ✓ | ✓ |
 | Professional photographs | Up to 20 | Up to 20 | Up to 20 |
 | Domain & hosting (99.9% uptime) | ✓ | ✓ | ✓ |
 | Technical support | 24/7 | 24/7 | 24/7 |
-| Minor changes / month | 15 | 25 | 45 |
+| Minutes of minor updates / month | 15 minutes | 25 minutes | 45 minutes |
 | Blog integration | — | ✓ | ✓ |
 | Calendar and chat integration | — | ✓ | ✓ |
 | Dynamic forms | — | Up to 3 | Up to 3 |
-| Multilingual | — | Basic (2 languages) | Professional translation (3 languages) |
+| Multilingual | — | 2 languages | Site support in three languages |
 | Monthly performance analysis | — | ✓ | — |
 | Monthly traffic/behavior reports | — | — | ✓ |
 | Payment gateway integration | — | — | ✓ |
@@ -88,8 +88,8 @@ Eng: implement as `.rs-plan` cards + optional comparison **feature** table (feat
 | External API connections | — | — | 2 |
 | Advanced speed optimization | — | — | ✓ |
 | Recommended badge | — | Yes | — |
-| Card CTA | Get a Basic quote | Get a Standard quote | Get a Premium quote |
-| Mailto subject | Quote request — Basic Plan | Quote request — Standard Plan | Quote request — Premium Plan |
+| Card CTA | Get a Launch quote | Get a Grow quote | Get a Commerce quote |
+| Mailto subject | Quote request — Launch | Quote request — Grow | Quote request — Commerce |
 
 **Custom (below matrix):** Don’t see a fit? Describe what you need — we’ll quote only that. CTA: Customize your build · subject `Custom quote — RenSher`
 
